@@ -1,0 +1,48 @@
+3 Queue
+FRONT:QUEUE
+END:QUEUE
+prgstartval:start
+one:1
+two:2
+three:3
+
+Queue:2 prgstartval one prgstartval
+      0 start pointer
+chkinst:4 one pointer:0 ENQUEUE
+        7 pointer checktwo
+        4 two checktwo:0 DEQUEUE
+        7 pointer checkthree
+        4 three checkthree:0 LENGTH
+        9
+  ENQUEUE:1 pointer one pointer 
+          7 pointer data
+          7 END End
+          7 data:0 End:0
+          1 END one END
+          1 pointer one pointer
+          3 chkinst         
+  DEQUEUE:4 FRONT END NODATA
+          1 pointer one pointer
+          7 FRONT Front
+          7 pointer rto
+          1 prgstartval rto:0 DATAReturn
+          7 Front:0 DATAReturn:0
+          1 FRONT one FRONT
+          1 pointer one pointer
+          3 chkinst
+      NODATA:1 pointer one pointer
+             7 pointer nrto
+             1 prgstartval nrto:0 NOData 
+             0 10101 NOData:0
+             1 pointer one pointer
+             3 chkinst
+   LENGTH:4 FRONT END NOLEN
+          9
+       NOLEN:1 pointer one pointer
+             7 pointer nl
+             1 prgstartval nl:0 NOLen 
+             0 101 NOLen:0
+             1 pointer one pointer
+             3 chkinst 
+start:3 2 2 4 2 6 9
+QUEUE:0
