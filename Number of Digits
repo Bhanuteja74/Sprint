@@ -1,0 +1,22 @@
+3 copy
+gn:12
+dig:0
+ten:10
+one:1
+zero:0
+q:0
+r:0
+cgn:0
+copy:7 gn cgn
+cmpe:4 cgn zero stop
+
+cmplt:5 cgn ten incdig
+2 cgn ten cgn
+1 q one q
+3 cmplt
+
+incdig:1 dig one dig
+7 q cgn
+7 zero q
+3 cmpe
+stop:9
