@@ -1,0 +1,22 @@
+3 start
+gn:999
+sumofdigits:0
+
+start:7 gn rem
+check0:4 rem zero stop
+
+checklt10:5 rem ten ins1
+2 rem ten rem
+1 quo one quo
+3 checklt10
+
+ins1:1 sumofdigits rem sumofdigits
+7 quo rem
+7 zero quo
+3 check0
+ten:10
+zero:0
+one:1
+rem:0
+quo:0
+stop:9
