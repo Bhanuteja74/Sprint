@@ -1,0 +1,31 @@
+3 6
+first_element_location:65
+length:4
+islistpalindrome:0
+4 length zero halt
+2 length one end_element_location
+1 first_element_location end_element_location end_element_location
+
+7 first_element_location f
+7 end_element_location l
+
+check:5 f l checkvalues
+3 true
+
+checkvalues:4 f:0 l:0 ins1
+3 halt
+
+ins1:1 f one f
+2 l one l
+3 check
+
+true:7 one islistpalindrome 
+3 halt
+
+zero:0
+one:1
+end_element_location:0
+halt:9
+swap_area:0
+
+0 0 0 0 0 0 0 0 0 1 2 2 1
