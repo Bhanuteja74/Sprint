@@ -1,0 +1,18 @@
+3 start
+first_element_loaction:37
+length:9 
+target:9
+result:0
+start:7 first_element_loaction increment
+loop:5 counter length check
+  3 stop
+check:4 target increment:check_element have
+  1 one increment increment
+  1 one  counter counter   
+  3 loop
+have:7 one result stop:9
+one:1
+counter:0 
+check_element:0
+
+0 0 0
