@@ -1,0 +1,103 @@
+3 sprintprogram
+zero:0
+one1:1
+two2:2
+three3:3
+four4:4
+five5:5
+seven7:7
+startvalue:0
+sprintprogram:0 start startvalue
+2 startvalue one1 startvalue
+checkpointer:0 pointer:start checkwith3
+4 three3 checkwith3:0 jump3 
+7 checkwith3 checkwith1
+4 one1 checkwith1:0 addition
+7 checkwith3 checkwith2
+4 two2 checkwith2:0 subtration
+7 checkwith3 checkwith4
+4 four4 checkwith4:0 Equeltojump
+7 checkwith3 checkwith5
+4 five5 checkwith5:0 lessthanjump
+7 checkwith3 checkwith7
+4 seven7 checkwith7:0 copyvalue
+7 checkwith3 checkwith0
+4 zero checkwith0:0 copydata
+halt:9
+
+copydata:1 pointer one1 pointer
+7 pointer datavalue
+1 pointer one1 pointer
+7 pointer vto
+1 startvalue  vto:0 valueto
+7 datavalue:0 valueto:0
+1 pointer one1 pointer
+3 checkpointer
+
+copyvalue:1 pointer one1 pointer
+7 pointer prgcpfrom
+1 startvalue prgcpfrom:0 cpfrom
+1 cpfrom one1 cpto
+7 cpfrom:0 cpto:0
+1 pointer two2 pointer
+3 checkpointer
+
+lessthanjump:1 pointer one1 pointer
+7 pointer plv1
+1 startvalue plv1:0 lv1
+1 pointer one1 pointer
+7 pointer plv2
+1 startvalue plv2:0 lv2
+1 pointer one1 pointer
+5 lv1:0 lv2:0 lessthanpointervalue
+3 checkpointer
+lessthanpointervalue:7 pointer lpv
+1 startvalue lpv:0 pointer
+3 checkpointer
+
+Equeltojump:1 pointer one1 pointer
+7 pointer pev1
+1 startvalue pev1:0 ev1
+1 pointer one1 pointer
+7 pointer pev2
+1 startvalue pev2:0 ev2
+1 pointer one1 pointer
+4 ev1:0 ev2:0 equalpointervalue
+3 checkpointer
+equalpointervalue:7 pointer epv
+1 startvalue epv:0 pointer
+3 checkpointer
+
+
+subtration:1 pointer one1 pointer
+7 pointer ps1
+1 startvalue ps1:0 s1
+1 pointer one1 pointer
+7 pointer ps2
+1 startvalue ps2:0 s2
+1 pointer one1 pointer
+7 pointer psubv
+1 startvalue psubv:0 subv
+2 s1:0 s2:0 subv:0
+1 pointer one1 pointer
+3 checkpointer
+ 
+addition:1 pointer one1 pointer
+7 pointer pv1
+1 startvalue pv1:0 v1
+1 pointer one1 pointer
+7 pointer pv2
+1 startvalue pv2:0 v2
+1 pointer one1 pointer
+7 pointer paddv
+1 startvalue paddv:0 addv
+1 v1:0 v2:0 addv:0
+1 pointer one1 pointer
+3 checkpointer
+
+jump3:1 pointer one1 pointer
+7 pointer s
+1 startvalue s:0 pointer
+3 checkpointer
+
+start:0 4 5 9 0 11 9 0 11 11 1 9 9 9 
