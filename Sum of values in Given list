@@ -1,0 +1,21 @@
+3 start
+first_data_location:58 resultlocation:100
+length:10
+start:7 first_data_location elementlocation
+
+7 resultlocation sum
+7 resultlocation result
+7 resultlocation reloc
+7 zero reloc:0
+
+repeat:5 counter length continue
+3 halt
+continue:1 elementlocation:0 sum:0 result:0
+1 one elementlocation elementlocation
+1 counter one counter
+3 repeat
+halt:9
+zero:0
+one:1
+counter:0
+0 0 0 1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10
