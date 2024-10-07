@@ -1,0 +1,31 @@
+3 5 
+first_element_location:69
+length:5
+
+2 length one end_element_location
+1 first_element_location end_element_location end_element_location
+
+7 first_element_location s1
+7 end_element_location s2
+7 first_element_location f
+7 end_element_location l
+
+check:5 f l swap
+3 halt
+
+swap:7 s1:0 swap_area 
+7 s2:0 f:0
+7 swap_area l:0
+
+1 s1 one s1
+2 s2 one s2
+7 s1 f
+7 s2 l
+3 check
+
+one:1
+end_element_location:0
+halt:9
+swap_area:0
+
+0 0 0 0 0 0 0 0 0 1 2 3 4 5 
